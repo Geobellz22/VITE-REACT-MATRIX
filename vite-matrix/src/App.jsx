@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home';
 import Login from './components/Login';
@@ -12,7 +12,7 @@ import OrderTracking from './components/OrderTracking';
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <div className="App">
         <header>
           <nav>
@@ -36,7 +36,7 @@ function App() {
           <Route path="/order-tracking/:orderId" element={<OrderTracking />} />
         </Routes>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
